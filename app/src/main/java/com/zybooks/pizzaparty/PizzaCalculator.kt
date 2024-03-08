@@ -2,11 +2,18 @@ package com.zybooks.pizzaparty
 
 import kotlin.math.ceil
 
-// Declares a compile-time constant named SLICES_PER_PIZZA with a value of 8
+/**
+ * PizzaCalculator class for the Pizza Party app.
+ *
+ * This class calculates the number of pizzas needed for a party based on
+ * the number of attendees and their hunger level.
+ */
+
+// Declares a constant named SLICES_PER_PIZZA with a value of 8
 const val SLICES_PER_PIZZA = 8
 
 class PizzaCalculator(partySize: Int, var hungerLevel: HungerLevel) {
-    var partySize = 0 // Declares a mutable property named partySize initialized with a default value of 0
+    var partySize = 0 // Declares a variable named partySize initialized with a default value of 0
         // Defines a custom setter for the partySize property
         set(value) {
             field = if (value >= 0) value else 0 // Ensures that the value of partySize cannot be set to a negative number
@@ -17,7 +24,7 @@ class PizzaCalculator(partySize: Int, var hungerLevel: HungerLevel) {
         LIGHT(2), MEDIUM(3), RAVENOUS(4)
     }
 
-    // Declares a read-only computed property named totalPizzas
+    // A getter method for dynamically calculating the total number of pizzas needed.
     val totalPizzas: Int
         // Defines a custom getter for the totalPizzas property
         get() {

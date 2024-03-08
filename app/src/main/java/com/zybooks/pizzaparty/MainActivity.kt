@@ -10,28 +10,28 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * MainActivity for the Pizza Party app.
  *
- * This activity allows users to calculate the number of pizzas needed for a party based on
+ * This activity allows users to get the number of pizzas needed for a party based on
  * the number of attendees and their hunger level.
  */
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var numAttendEditText: EditText //Creating a reference to the edit text UI element
-    private lateinit var numPizzasTextView: TextView //Creating a reference to the "total pizzas" text UI element
-    private lateinit var howHungryRadioGroup: RadioGroup //Creating a reference to the Radio group UI element
+    private lateinit var numAttendEditText: EditText // Creating a reference to the edit text UI element
+    private lateinit var numPizzasTextView: TextView // Creating a reference to the "total pizzas" text UI element
+    private lateinit var howHungryRadioGroup: RadioGroup // Creating a reference to the Radio group UI element
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        numAttendEditText = findViewById(R.id.num_attend_edit_text) //Finding the edit text UI element using its ID
-        numPizzasTextView = findViewById(R.id.num_pizzas_text_view) //Finding the "total pizzas" text UI element using its ID
-        howHungryRadioGroup = findViewById(R.id.hungry_radio_group) //Finding the radio group UI element using its ID
+        numAttendEditText = findViewById(R.id.num_attend_edit_text) // Finding the edit text UI element using its ID
+        numPizzasTextView = findViewById(R.id.num_pizzas_text_view) // Finding the "total pizzas" text UI element using its ID
+        howHungryRadioGroup = findViewById(R.id.hungry_radio_group) // Finding the radio group UI element using its ID
     }
 
     /**
      * Handles the click event for the calculate button.
      *
-     * This function reads the number of attendees and their hunger level, calculates the
+     * This function reads the number of attendees and their hunger level, gets the
      * total number of pizzas required, and displays the result.
      *
      * @param view The view that was clicked.
