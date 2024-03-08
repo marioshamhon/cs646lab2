@@ -1,2 +1,2 @@
-# cs646lab2
- CS0646 lab 2
+# CS-646 Lab 2
+ 
